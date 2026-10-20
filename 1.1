@@ -1,36 +1,36 @@
 #include <stdio.h>
 #include <math.h>
 
-/
- * @brief рассчет функции A
- * 
+/**
+ * @brief расчет функции A
+ *
  * @param x - параметр
  * @param y - параметр
  * @param z - параметр
- * @return значение функции A 
+ * @return значение функции A
  */
 double GetA(const double x, const double y, const double z);
 
-/
- * @brief рассчет функции B
- * 
+/**
+ * @brief расчет функции B
+ *
  * @param x - параметр
  * @param y - параметр
  * @param z - параметр
- * @return значение функции B 
+ * @return значение функции B
  */
 double GetB(const double x, const double y, const double z);
 
 /**
  * @brief точка входа в программу
- * 
+ *
  * @return возвращает 0 в случае успешного завершения программы
  */
 int main()
 {
-    const double x = 1.426;
-    double y = -1.22;
-    double z = 3.5;
+    const double x = 0.3;
+    double y = 2.9;
+    double z = 0.5;
 
     printf("A = %lf\n", GetA(x, y, z));
     printf("B = %lf\n", GetB(x, y, z));
@@ -40,10 +40,12 @@ int main()
 
 double GetA(const double x, const double y, const double z)
 {
-    return (2 * cos(x - M_PI6)) / (0.5 + sin(y) * sin(y));
+    return (z * z * x + exp(-x) * cos(y * x)) /
+           (y * x - exp(-x) * sin(y * x) + 1);
 }
 
 double GetB(const double x, const double y, const double z)
 {
-    return 1 + (zz) / (3 + zz / 5);
+    return exp(2 * x) * log(z + x) -
+           pow(y, 3 * x) * log(y - x);
 }
