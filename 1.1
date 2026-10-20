@@ -28,9 +28,9 @@ double GetB(const double x, const double y, const double z);
  */
 int main()
 {
-    const double x = 1.426;
-    double y = -1.22;
-    double z = 3.5;
+    double x = -2.9;
+    double y = 15.5;
+    double z = 1.5;
 
     printf("A = %lf\n", GetA(x, y, z));
     printf("B = %lf\n", GetB(x, y, z));
@@ -38,12 +38,10 @@ int main()
     return 0;
 }
 
-double GetA(const double x, const double y, const double z)
-{
-    return (2 * cos(x - M_PI6)) / (0.5 + sin(y) * sin(y));
+double GetA(const double x, const double y, const double z){
+    return sqrt(pow(x, 2) + y) - pow(y, 2) * pow(sin((x + z) / x), 3);
 }
 
-double GetB(const double x, const double y, const double z)
-{
-    return 1 + (zz) / (3 + zz / 5);
+double GetB(const double x, const double y, const double z){
+    return pow(cos(pow(x, 3)), 2) - (x / (sqrt(pow(z, 2) + pow(y, 2))));
 }
