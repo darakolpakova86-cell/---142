@@ -2,12 +2,36 @@
 #include <math.h>
 #include <stdlib.h>
 
+/**
+ * @brief Считывает с клавиатуры значение с плавающей точкой
+ * @return Считанное значение
+ */
 double getDouble();
 
+/**
+ * @brief Проверяет допустимость введённых значений
+ * @param x значение x
+ * @param y значение y
+ * @param z значение z
+ */
 void checkValues(const double x, const double y, const double z);
 
+/**
+ * @brief Вычисляет значение функции a
+ * @param x значение x
+ * @param y значение y
+ * @param z значение z
+ * @return Рассчитанное значение a
+ */
 double a(const double x, const double y, const double z);
 
+/**
+ * @brief Вычисляет значение функции b
+ * @param x значение x
+ * @param y значение y
+ * @param z значение z
+ * @return Рассчитанное значение b
+ */
 double b(const double x, const double y, const double z);
 
 /**
@@ -33,10 +57,6 @@ int main()
     return 0;
 }
 
-/**
- * @brief Считывает с клавиатуры значение с плавающей точкой
- * @return Считанное значение
- */
 double getDouble()
 {
     double value = 0.0;
@@ -50,12 +70,6 @@ double getDouble()
     return value;
 }
 
-/**
- * @brief Проверяет допустимость введённых значений
- * @param x значение x
- * @param y значение y
- * @param z значение z
- */
 void checkValues(const double x, const double y, const double z)
 {
     if (x < -1)
@@ -71,26 +85,12 @@ void checkValues(const double x, const double y, const double z)
     }
 }
 
-/**
- * @brief Вычисляет значение функции a
- * @param x значение x
- * @param y значение y
- * @param z значение z
- * @return Рассчитанное значение a
- */
 double a(const double x, const double y, const double z)
 {
     return sin(x) / sqrt(y * y + sin(x) * sin(x))
            - pow(x, 2) * y * z;
 }
 
-/**
- * @brief Вычисляет значение функции b
- * @param x значение x
- * @param y значение y
- * @param z значение z
- * @return Рассчитанное значение b
- */
 double b(const double x, const double y, const double z)
 {
     return exp(-z * x) * sqrt(x + 1) + exp(-y * x);
