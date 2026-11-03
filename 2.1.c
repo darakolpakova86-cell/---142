@@ -12,7 +12,7 @@ int getInt();
  * @param a первое число
  * @param b второе число
  */
-void checkValues(const int a, const int b);
+
 
 /**
  * @brief Вычисляет сумму двух чисел
@@ -50,8 +50,7 @@ int main()
     printf("Enter b: ");
     int b = getInt();
 
-    checkValues(a, b);
-
+    
     printf("Sum = %d\n", sum(a, b));
     printf("Difference = %d\n", difference(a, b));
     printf("Average = %lf\n", average(a, b));
@@ -72,11 +71,7 @@ int getInt()
     return value;
 }
 
-void checkValues(const int a, const int b)
-{
-    (void)a;
-    (void)b;
-}
+
 
 int sum(const int a, const int b)
 {
