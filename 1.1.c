@@ -26,11 +26,6 @@ double b(const double x, const double y, const double z);
  */
 int main()
 {
-    const double x = 1.7;
-    const double y = 1.08;
-    const double z = 0.5;
-
-    checkValues(x, y, z);
 
     printf("a = %lf\n", a(x, y, z));
     printf("b = %lf\n", b(x, y, z));
